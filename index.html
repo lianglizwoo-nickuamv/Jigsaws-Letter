@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Grabacion encontrada</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="tv-screen">
+    <div id="static-overlay"></div>
+
+    <!-- Pantalla 1: Boton de Inicio -->
+    <div class="scene active" id="scene-start">
+      <p class="tv-label">CONNECTION TERMINATED</p>
+      <button id="btn-start">REPRODUCIR GRABACION?</button>
+    </div>
+
+    <!-- Pantalla 2: Saludo de Jigsaw -->
+    <div class="scene" id="scene-greeting">
+      <img src="assets/jigsaw.png" class="jigsaw-img" alt="Jigsaw">
+      <p class="dialogue" id="text-greeting"></p>
+    </div>
+
+    <!-- Pantalla 3: Primera selección de diálogo -->
+    <div class="scene" id="scene-choices">
+      <img src="assets/jigsaw.png" class="jigsaw-img" alt="Jigsaw">
+      <div class="choices" id="first-choices">
+        <button class="choice-btn first-choice-btn" data-choice="A">Sos fan mio?</button>
+        <button class="choice-btn first-choice-btn" data-choice="B">Creo que no tuve que haberme dormido tan tarde de nuevo, comienzo a ver cosas..</button>
+      </div>
+    </div>
+
+    <!-- Pantalla 3b: Respuesta a primera selección -->
+    <div class="scene" id="scene-first-response">
+      <img src="assets/jigsaw.png" class="jigsaw-img" alt="Jigsaw">
+      <p class="dialogue" id="text-first-response"></p>
+    </div>
+
+    <!-- Pantalla 3c: Diálogos universales + segunda selección -->
+    <div class="scene" id="scene-universal-choices">
+      <img src="assets/jigsaw.png" class="jigsaw-img" alt="Jigsaw">
+      <p class="dialogue" id="text-universal"></p>
+      <div class="choices" id="second-choices">
+        <button class="choice-btn second-choice-btn" data-choice="A">Voy a despertar dentro de poco... verdad?</button>
+        <button class="choice-btn second-choice-btn" data-choice="B">Pues si es que se mueren de unas formas tan balurdes...</button>
+      </div>
+    </div>
+
+    <!-- Pantalla 4: Respuesta + Dialogo universal -->
+    <div class="scene" id="scene-response">
+      <img src="assets/jigsaw.png" class="jigsaw-img" alt="Jigsaw">
+      <p class="dialogue" id="text-response"></p>
+    </div>
+
+    <!-- Pantalla 5: Jaula revelada -->
+    <div class="scene" id="scene-cage">
+      <div class="cage-container">
+        <img src="assets/peluche.png" class="peluche-img" alt="Peluche">
+        <div class="bars"></div>
+      </div>
+      <p class="dialogue" id="text-cage"></p>
+    </div>
+
+    <!-- Pantalla 6: Reglas Finales del Juego -->
+    <div class="scene" id="scene-final">
+      <img src="assets/jigsaw.png" class="jigsaw-img" alt="Jigsaw">
+      <p class="dialogue" id="text-final"></p>
+    </div>
+
+  </div>
+
+  <audio id="theme-audio" src="assets/tema.mp3"></audio>
+  <audio id="static-audio" src="assets/static.mp3"></audio>
+  <audio id="turnoff-audio" src="assets/turnoff.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
